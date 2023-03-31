@@ -1,0 +1,71 @@
+<BattleshipGame>:
+    boardGrid: board_map
+    targetGrid: targetBoard_map
+    preGameGrid: preGameLayout
+    clearGrid: clearLayout
+    applyGrid: applyLayout
+    endGrid: endLayout
+    menuGrid:menuLayout
+    info_label: info
+    Image:
+        source:'assets/5.png'
+        allow_stretch: True
+        keep_ratio: False
+        size:root.width, root.height
+    GridLayout:
+        id:applyLayout
+        cols:1
+        rows:1
+    GridLayout:
+        id:preGameLayout
+        cols:2
+        rows:9
+        size: root.width / 4, root.height / 2
+        x: root.width / 2 - self.width / 2
+        y: root.height / 2 - self.height / 2
+    GridLayout:
+        size:root.width / 3, root.height / 2
+        id: board_map
+        cols: 10
+        rows: 10
+        y: root.height / 2 - self.height / 2
+        x: 0
+    GridLayout:
+        size:root.width / 3, root.height / 2
+        x: root.width - self.width - 0
+        id: targetBoard_map
+        cols: 10
+        rows: 10
+        y: root.height / 2 - self.height / 2
+    GridLayout:
+        id: clearLayout
+        cols:1
+        rows:1
+        size: 100,50
+        x:root.width / 2 - self.width / 2
+        y:50
+    GridLayout:
+        id:endLayout
+        size: root.width / 4, root.height / 4
+        x: root.width / 2 - self.width / 2
+        y: root.height / 2 - self.height / 2
+        cols:1
+        rows:2
+
+    GridLayout:
+        id: menuLayout
+        size: root.width / 4, root.height / 4
+        x: root.width / 2 - self.width / 2
+        y: root.height / 2 - self.height / 2
+        cols:1
+        rows:3
+
+    Label:
+        id: info
+        font_size:20
+        color:(1,1,1,1)
+        outline_width:2
+        outline_color:(0,0,0,1)
+        x: root.width / 2 - self.width / 2
+        y: root.height - self.height - 10
+
